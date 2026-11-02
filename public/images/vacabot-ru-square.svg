@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Главный экран VacaBot на русском языке</title>
+  <desc id="desc">Экран сервиса VacaBot с поиском вакансий, категориями и навигацией.</desc>
+  <defs>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1761ef"/>
+      <stop offset="1" stop-color="#2735a7"/>
+    </linearGradient>
+    <linearGradient id="join" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4389f5"/>
+      <stop offset="1" stop-color="#1653df"/>
+    </linearGradient>
+    <linearGradient id="ai" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#962be7"/>
+      <stop offset="1" stop-color="#7120d3"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="170%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#2457c7" flood-opacity=".22"/>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="1024" fill="#fff"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="202" y="45" fill="#121212" font-size="27" font-weight="700">VacaBot</text>
+    <rect x="724" y="12" width="108" height="46" rx="16" fill="#2462e9"/>
+    <text x="778" y="42" text-anchor="middle" fill="#fff" font-size="21" font-weight="700">TG Bot</text>
+
+    <rect x="170" y="70" width="684" height="477" fill="url(#hero)"/>
+    <text x="194" y="116" fill="#d8e4ff" font-size="21">Добро пожаловать!</text>
+    <text x="194" y="162" fill="#fff" font-size="39" font-weight="700">Привет, Алекс 👋</text>
+    <circle cx="798" cy="157" r="37" fill="#ffffff" fill-opacity=".18"/>
+    <circle cx="798" cy="157" r="22" fill="#eff4ff" fill-opacity=".65"/>
+    <rect x="782" y="146" width="32" height="24" rx="8" fill="#566eea"/>
+    <circle cx="791" cy="157" r="3" fill="#fff"/>
+    <circle cx="805" cy="157" r="3" fill="#fff"/>
+    <path d="M791 165h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+
+    <rect x="194" y="198" width="146" height="43" rx="21" fill="#fff" fill-opacity=".16"/>
+    <text x="214" y="227" fill="#ffe16c" font-size="22">♛</text>
+    <text x="245" y="226" fill="#fff" font-size="19" font-weight="700">Про план</text>
+
+    <rect x="194" y="260" width="636" height="64" rx="17" fill="#fff"/>
+    <circle cx="221" cy="289" r="10" fill="none" stroke="#a8b0bd" stroke-width="3"/>
+    <path d="m229 297 8 8" stroke="#a8b0bd" stroke-width="3" stroke-linecap="round"/>
+    <text x="250" y="298" fill="#858c98" font-size="21">Поиск вакансий...</text>
+
+    <g fill="#fff">
+      <path d="M198 352h17l3 7h-23z" fill="none" stroke="#dce7ff" stroke-width="2"/>
+      <path d="M200 359h14v15h-14z" fill="none" stroke="#dce7ff" stroke-width="2"/>
+    </g>
+    <text x="233" y="367" fill="#fff" font-size="22" font-weight="700">9 103+</text>
+    <text x="233" y="393" fill="#e4ebff" font-size="19">вакансий</text>
+    <path d="M492 354v44" stroke="#91a9f8" stroke-opacity=".45" stroke-width="2"/>
+    <path d="m526 368 10-8 8 5 12-13" fill="none" stroke="#dce7ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="566" y="368" fill="#fff" font-size="19">Обновляется</text>
+    <text x="566" y="393" fill="#fff" font-size="19">ежедневно</text>
+    <circle cx="202" cy="421" r="5" fill="#37d2d1"/>
+    <text x="217" y="427" fill="#d9e5ff" font-size="16">Поиск по 21 активному каналу с вакансиями</text>
+
+    <rect x="194" y="461" width="636" height="66" rx="19" fill="url(#join)" filter="url(#shadow)"/>
+    <text x="410" y="502" fill="#fff" font-size="22">●</text>
+    <text x="444" y="503" fill="#fff" font-size="22" font-weight="700">Присоединиться к чату</text>
+
+    <rect x="170" y="547" width="684" height="398" fill="#fafafa"/>
+    <text x="194" y="585" fill="#151515" font-size="22" font-weight="700">Категории</text>
+
+    <g font-size="19" fill="#30343c">
+      <rect x="194" y="603" width="310" height="57" rx="15" fill="#fff"/>
+      <text x="215" y="640" font-size="22">💻</text>
+      <text x="253" y="638">IT / Разработка</text>
+      <rect x="516" y="603" width="314" height="57" rx="15" fill="#fff"/>
+      <text x="537" y="640" font-size="22">🎨</text>
+      <text x="576" y="638">Дизайн</text>
+
+      <rect x="194" y="670" width="310" height="57" rx="15" fill="#fff"/>
+      <text x="215" y="707" font-size="22">📢</text>
+      <text x="253" y="705">Маркетинг</text>
+      <rect x="516" y="670" width="314" height="57" rx="15" fill="#fff"/>
+      <text x="537" y="707" font-size="22">💼</text>
+      <text x="576" y="705">Продажи</text>
+
+      <rect x="194" y="737" width="310" height="57" rx="15" fill="#fff"/>
+      <text x="215" y="774" font-size="22">💰</text>
+      <text x="253" y="772">Финансы</text>
+      <rect x="516" y="737" width="314" height="57" rx="15" fill="#fff"/>
+      <text x="537" y="774" font-size="22">⚖️</text>
+      <text x="576" y="772" font-size="17">Юриспруденция</text>
+    </g>
+
+    <text x="512" y="833" text-anchor="middle" fill="#2462e9" font-size="18" font-weight="700">Все категории　›</text>
+    <rect x="194" y="861" width="636" height="72" rx="18" fill="url(#ai)"/>
+    <circle cx="234" cy="897" r="22" fill="#fff" fill-opacity=".14"/>
+    <text x="223" y="905" fill="#ffe171" font-size="24">✦</text>
+    <text x="270" y="904" fill="#fff" font-size="21" font-weight="700">ИИ-ассистент для карьеры</text>
+
+    <rect y="945" width="1024" height="79" fill="#fff"/>
+    <path d="M218 978v-14l18-15 18 15v14h-12v-12h-12v12z" fill="none" stroke="#2462e9" stroke-width="3" stroke-linejoin="round"/>
+    <circle cx="381" cy="965" r="11" fill="none" stroke="#a7acb5" stroke-width="3"/>
+    <path d="m389 973 9 9" stroke="#a7acb5" stroke-width="3" stroke-linecap="round"/>
+    <rect x="550" y="956" width="31" height="23" rx="7" fill="none" stroke="#a7acb5" stroke-width="3"/>
+    <circle cx="559" cy="967" r="2.5" fill="#a7acb5"/>
+    <circle cx="572" cy="967" r="2.5" fill="#a7acb5"/>
+    <path d="M559 974h13" stroke="#a7acb5" stroke-width="2" stroke-linecap="round"/>
+    <path d="M725 956v26l12-7 12 7v-26z" fill="none" stroke="#a7acb5" stroke-width="3" stroke-linejoin="round"/>
+    <circle cx="892" cy="961" r="8" fill="none" stroke="#a7acb5" stroke-width="3"/>
+    <path d="M877 983c1-10 29-10 30 0" fill="none" stroke="#a7acb5" stroke-width="3" stroke-linecap="round"/>
+    <g font-size="13" text-anchor="middle">
+      <text x="236" y="1007" fill="#2462e9">Главная</text>
+      <text x="386" y="1007" fill="#8d929b">Вакансии</text>
+      <text x="566" y="1007" fill="#8d929b">ИИ</text>
+      <text x="737" y="1007" fill="#8d929b">Сохранённые</text>
+      <text x="892" y="1007" fill="#8d929b">Профиль</text>
+    </g>
+  </g>
+</svg>
