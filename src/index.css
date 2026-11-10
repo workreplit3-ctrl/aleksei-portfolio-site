@@ -36,6 +36,46 @@ button { background: none; border: 0; cursor: pointer; }
 /* pills */
 .pill { display: inline-flex; align-items: center; gap: 10px; border-radius: 999px; padding: 12px 22px; font-weight: 500; font-size: 15px;
   transition: background .35s, color .35s, transform .35s cubic-bezier(.16,1,.3,1); white-space: nowrap; }
+.pill:is(a, button):not(.pill-outline) {
+  position: relative;
+  isolation: isolate;
+  box-shadow: 0 5px 0 rgba(33,33,33,.28), 0 9px 0 rgba(33,33,33,.09), 0 15px 22px rgba(33,33,33,.2),
+    inset 0 2px 0 rgba(255,255,255,.68), inset 0 -2px 0 rgba(33,33,33,.12);
+  translate: 0 0;
+  transition: background .35s, color .35s, transform .35s cubic-bezier(.16,1,.3,1),
+    box-shadow .35s, translate .35s cubic-bezier(.16,1,.3,1);
+}
+.pill:is(a, button):not(.pill-outline)::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: .8;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.42), transparent 58%),
+    linear-gradient(110deg, transparent 34%, rgba(255,255,255,.48) 48%, transparent 62%);
+  background-size: 100% 100%, 230% 100%;
+  background-position: 0 0, 135% 0;
+  transition: opacity .3s, background-position .75s cubic-bezier(.16,1,.3,1);
+}
+.pill:is(a, button):not(.pill-outline):hover {
+  box-shadow: 0 8px 0 rgba(33,33,33,.28), 0 12px 0 rgba(33,33,33,.08), 0 22px 30px rgba(33,33,33,.24),
+    inset 0 2px 0 rgba(255,255,255,.8), inset 0 -2px 0 rgba(33,33,33,.08);
+  translate: 0 -3px;
+}
+.pill:is(a, button):not(.pill-outline):hover::before,
+.pill:is(a, button):not(.pill-outline):focus-visible::before {
+  opacity: 1;
+  background-position: 0 0, -35% 0;
+}
+.pill:is(a, button):not(.pill-outline):active {
+  box-shadow: 0 2px 0 rgba(33,33,33,.24), 0 4px 7px rgba(33,33,33,.16),
+    inset 0 2px 5px rgba(33,33,33,.14), inset 0 1px 0 rgba(255,255,255,.4);
+  translate: 0 3px;
+}
+.pill:is(a, button):not(.pill-outline):focus-visible { outline: 3px solid var(--hot); outline-offset: 4px; }
 .pill-white { background: var(--cream); color: var(--ink); }
 .pill-solid { background: var(--ink); color: var(--cream); padding: 18px 30px; font-size: 17px; }
 .pill-solid:hover { background: var(--hot); }
@@ -57,8 +97,14 @@ button { background: none; border: 0; cursor: pointer; }
 .entry-line { max-width: 360px; margin: 0; font-size: 15px; line-height: 1.3; color: #4a4443; }
 .entry-btn { margin-top: 18px; padding: 13px 26px; font-size: 16px; }
 .arrow-dn { font-size: 14px; }
-.entry-quiet { position: absolute; bottom: 38px; left: 50%; transform: translateX(-50%); font-size: 11px; text-transform: uppercase; letter-spacing: .02em; border-bottom: 1px solid; padding-bottom: 2px; }
+.entry-quiet { position: absolute; bottom: 38px; left: 50%; transform: translateX(-50%); padding: 9px 16px; border: 1px solid rgba(33,33,33,.38); border-radius: 999px;
+  background: rgba(251,244,241,.76); font-size: 11px; text-transform: uppercase; letter-spacing: .02em;
+  box-shadow: 0 4px 0 rgba(33,33,33,.24), 0 9px 16px rgba(33,33,33,.16), inset 0 1px 0 rgba(255,255,255,.9), inset 0 -1px 0 rgba(33,33,33,.08);
+  transition: color .3s, background .3s, box-shadow .3s, translate .3s cubic-bezier(.16,1,.3,1); }
+.entry-quiet:hover { color: var(--hot); background: var(--cream); box-shadow: 0 7px 0 rgba(33,33,33,.22), 0 14px 22px rgba(33,33,33,.2), inset 0 2px 0 #fff; translate: 0 -2px; }
+.entry-quiet:active { box-shadow: 0 1px 0 rgba(33,33,33,.2), inset 0 2px 5px rgba(33,33,33,.12); translate: 0 2px; }
 .entry-lang { position: absolute; top: 24px; right: 24px; padding: 8px 16px; font-size: 13px; }
+.entry .pill.entry-lang { position: absolute; }
 .wipe { position: fixed; inset: 0; z-index: 85; background: var(--ink); color: var(--rose); display: grid; place-items: center; font: 900 clamp(60px, 16vw, 240px) var(--font); letter-spacing: -.06em; }
 
 /* masks */
@@ -175,6 +221,7 @@ button { background: none; border: 0; cursor: pointer; }
 .footer a:hover { color: var(--rose); }
 .back-to-top { position: fixed; right: max(18px, env(safe-area-inset-right)); bottom: calc(18px + env(safe-area-inset-bottom)); z-index: 65;
   min-height: 44px; border: 1px solid var(--rose); box-shadow: 0 4px 18px rgba(0,0,0,.18); }
+.site a.pill.back-to-top { position: fixed; }
 .back-to-top:hover { background: var(--cream); color: var(--ink); }
 .back-to-top:focus-visible { outline: 3px solid var(--hot); outline-offset: 4px; }
 
