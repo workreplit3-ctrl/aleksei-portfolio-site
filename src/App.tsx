@@ -475,10 +475,13 @@ function Main({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => void }) {
         </div>
         <div className="footer">
           <span>{t.footer}</span>
-          <a href="#top" data-testid="link-back-to-top" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: noMotion ? 'instant' : 'smooth' }); }}>{t.top} ↑</a>
           <span>© ALEKSEI</span>
         </div>
       </motion.footer>
+      <a className="pill pill-dark back-to-top" href="#top" data-testid="link-back-to-top"
+        onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: noMotion ? 'instant' : 'smooth' }); }}>
+        {t.top} <span aria-hidden="true">↑</span>
+      </a>
     </motion.main>
   );
 }

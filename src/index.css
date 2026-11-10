@@ -173,6 +173,10 @@ button { background: none; border: 0; cursor: pointer; }
 .contact-copy { max-width: 420px; font-size: 18px; line-height: 1.35; margin: 0; }
 .footer { display: flex; justify-content: space-between; gap: 16px; padding-top: 18px; border-top: 1px solid rgba(246,200,195,.3); font: 11px var(--mono); text-transform: uppercase; color: rgba(251,244,241,.7); }
 .footer a:hover { color: var(--rose); }
+.back-to-top { position: fixed; right: max(18px, env(safe-area-inset-right)); bottom: calc(18px + env(safe-area-inset-bottom)); z-index: 65;
+  min-height: 44px; border: 1px solid var(--rose); box-shadow: 0 4px 18px rgba(0,0,0,.18); }
+.back-to-top:hover { background: var(--cream); color: var(--ink); }
+.back-to-top:focus-visible { outline: 3px solid var(--hot); outline-offset: 4px; }
 
 @media (max-width: 767px) {
   .nav-hide { display: none; }
